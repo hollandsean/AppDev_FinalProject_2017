@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>One Person</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" type="text/css" media="all" href="../static/styles.css"
+th:href="@{/styles.css}" />
+</head>
+<body>
+<h1 th:text="${bundle.id}">Bundle ID</h1>
+<h1 th:text="${bundle.name}">Bundle Name</h1>
+<h1 th:text="${bundle.flowers}">Bundle Flowers</h1>
+<h1 th:text="${bundle.chocolate}">Bundle Chocolate</h1>
+<h1 th:text="${bundle.specialItem}">Bundle Special Item</h1>
+<h1 th:text="${bundle.price}">Bundle Price</h1>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Spring Boot Thymeleaf Hello World Example</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+ <link rel="stylesheet" type="text/css" media="all" href="../static/styles.css"
+th:href="@{/styles.css}" />
+</head>
+<body>
+<h1>Bundles in Database</h1>
+<table>
+<tr>
+<!-- <th>id</th>-->
+<th>Name</th>
+<th>Flowers</th>
+<th>Chocolate</th>
+<th>Special Item</th>
+<!-->th>Price</th>-->
+</tr>
+<tr th:each="Bundle : ${Bundles}">
+<!-- <td th:text="${Bundle.id}">id</td> -->
+<td th:text="${Bundle.name}">Name</td>
+<td th:text="${Bundle.flowers}">Flowers</td>
+<td th:text="${Bundle.chocolate}">Chocolate</td>
+<td th:text="${Bundle.specialItem}">Special Item</td>
+<!-- <td th:text="${Bundle.price}">Price</td> -->
+</tr>
+</table>
+</body>
+</html>
