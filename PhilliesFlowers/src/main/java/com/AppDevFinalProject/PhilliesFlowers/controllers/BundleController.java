@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.AppDevFinalProject.PhilliesFlowers.entities.Bundle;
 import com.AppDevFinalProject.PhilliesFlowers.repositories.BundleRepo;
@@ -17,30 +16,10 @@ public class BundleController
 {
 	@Autowired
 	BundleRepo bundleRepo;
-	/**
-	* Calls index.html
-	*/
-	@GetMapping("/")
-	public String welcomeWithParams(Model model)
-	{
-		System.out.println("HERE");	
-		return "index";
-	}
-	/*
-	* An example of using a path variable.
-	* localhost:8080/usingParameter?name=Cliona will add Cliona to the welcome
-	* localhost:8080/usingParameter uses the default value of To You!
-	*/
-	@GetMapping("/usingParameter")
-	public String doWelcomeWithParams(@RequestParam(value="name", defaultValue="To You!")String name, Model model)
-	{
-		String sentence = "Welcome " + name;
-		model.addAttribute("message", sentence);
-		return "parameter";
-	}
+
 	/*
 	* The repository uses the in-built findAll() method of MongoRepository
-	* This returns a list of People
+	* This returns a list of bundles
 	* This list is added to the model
 	* The model is sent to the displayAll.html template.
 	*/
