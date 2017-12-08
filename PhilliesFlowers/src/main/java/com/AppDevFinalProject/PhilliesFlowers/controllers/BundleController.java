@@ -38,9 +38,9 @@ public class BundleController
 	* The model is sent to the displayOne.html resolver.
 	*/
 	@GetMapping("/displayOne/{id}")
-	public String showMyDetails(@PathVariable int id, Model model)
+	public String showMyDetails(@PathVariable Integer id, Model model)
 	{
-	Bundle b = (Bundle) bundleRepo.findOne((int) id);
+	Bundle b = (Bundle) bundleRepo.findOne(id);
 	model.addAttribute("Bundle", b);
 	return "displayOne";
 	}

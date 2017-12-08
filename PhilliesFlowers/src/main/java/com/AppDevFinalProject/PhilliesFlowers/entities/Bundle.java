@@ -6,14 +6,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Bundle 
 {
 	@Id
-	int id;
+	Integer id;
 	String name;
 	String flowers;
 	String chocolate;
 	String specialItem;
-	int price;
+	Integer price;
 	
-	public Bundle(int id, String name, String flowers, String chocolate, String specialItem, int price)
+	public Bundle(Integer id, String name, String flowers, String chocolate, String specialItem, Integer price)
 	{
 		this.id = id;
 		this.name = name;
@@ -23,11 +23,11 @@ public class Bundle
 		this.price = price;
 	}
 	
-	public void setID(int id) 
+	public void setID(Integer id) 
 	{
        this.id = id;
     }
-    public int getID() 
+    public Integer getID() 
     {
        return id;
     }
@@ -69,11 +69,11 @@ public class Bundle
        return specialItem;
     }
     
-    public void setPrice(int price) 
+    public void setPrice(Integer price) 
 	{
        this.price = price;
     }
-    public int getPrice() 
+    public Integer getPrice() 
     {
        return price;
     }

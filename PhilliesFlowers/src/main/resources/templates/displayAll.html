@@ -1,11 +1,12 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Spring Boot Thymeleaf Hello World Example</title>
+<title>Phillies Flowers</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<h1>Bundles in Database</h1>
+<h1>Bundles Available</h1>
+<h2>Please select a bundle</h2>
 <table>
 <tr>
 <!-- <th>id</th>-->
@@ -13,7 +14,7 @@
 <th>Flowers</th>
 <th>Chocolate</th>
 <th>Special Item</th>
-<!-->th>Price</th>-->
+<!--<th>Price</th>-->
 </tr>
 <tr th:each="Bundle : ${Bundles}">
 <!-- <td th:text="${Bundle.id}">id</td> -->
@@ -24,5 +25,10 @@
 <!-- <td th:text="${Bundle.price}">Price</td> -->
 </tr>
 </table>
+
+<h2>Please Fill in your details</h2>
+
+
+
 </body>
 </html>
